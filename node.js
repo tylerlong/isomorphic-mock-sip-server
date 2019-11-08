@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const SIP = {
   set: (name, value) => {
-    fs.writeFileSync(path.join(os.tmpdir(), name), `{"type": "${value.type}","sdp":"${value.sdp}"}`)
+    fs.writeFileSync(path.join(os.tmpdir(), name), JSON.stringify({ type: value.type, sdp: value.sdp }))
   },
   get: name => {
     const filePath = path.join(os.tmpdir(), name)
