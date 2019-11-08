@@ -1,6 +1,6 @@
 {
   "name": "isomorphic-mock-sip-server",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "main": "node.js",
   "browser": "browser.js",
