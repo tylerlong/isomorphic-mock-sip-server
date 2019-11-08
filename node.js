@@ -7,11 +7,16 @@ const SIP = {
     fs.writeFileSync(path.join(os.tmpdir(), name), value)
   },
   get: name => {
-    return JSON.parse(fs.readFileSync(path.join(os.tmpdir(), name), { encoding: 'utf-8' }))
+    const filePath = path.join(os.tmpdir(), name)
+    if (!fs.existsSync(filePath)) {
+      return undefined
+    }
+    return JSON.parse(fs.readFileSync(filePath, { encoding: 'utf-8' }))
   },
   remove: name => {
-    if (fs.existsSync(path.join(os.tmpdir(), name))) {
-      fs.unlinkSync(path.join(os.tmpdir(), name))
+    const filePath = path.join(os.tmpdir(), name)
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath)
     }
   }
 }
