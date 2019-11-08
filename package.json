@@ -1,0 +1,14 @@
+{
+  "name": "isomorphic-mock-sip-server",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "node.js",
+  "browser": "browser.js",
+  "devDependencies": {
+    "standard": "^14.3.1",
+    "yarn-upgrade-all": "^0.5.2"
+  },
+  "peerDependencies": {
+    "js-cookie": "^2.2.1"
+  }
+}
